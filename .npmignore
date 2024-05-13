@@ -1,0 +1,6 @@
+docker-lambda-aws/*.ts
+docker-lambda-aws/!*.d.ts
+
+# CDK asset staging directory
+docker-lambda-aws/.cdk.staging
+docker-lambda-aws/cdk.out

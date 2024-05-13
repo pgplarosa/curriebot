@@ -6,3 +6,15 @@ __pycache__/
 notebooks/.ipynb_checkpoints/
 notebooks/__pycache__/
 vector_db/
+docker-lambda-aws/*.js
+docker-lambda-aws/!jest.config.js
+docker-lambda-aws/*.d.ts
+docker-lambda-aws/node_modules
+
+# CDK asset staging directory
+docker-lambda-aws/.cdk.staging
+docker-lambda-aws/cdk.out
+
+docker-lambda-aws/image/vector_db
+docker-lambda-aws/image/raw
+
