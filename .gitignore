@@ -18,3 +18,4 @@ docker-lambda-aws/cdk.out
 docker-lambda-aws/image/vector_db
 docker-lambda-aws/image/raw
 
+notebooks/default.sqlite

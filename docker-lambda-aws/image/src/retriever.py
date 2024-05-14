@@ -38,8 +38,7 @@ def get_retriever():
                       `Willis Towers Watsons`""",
         type="string",
     ),
-]
-    
+    ]
     document_content_description = "Resume details"
     llm = ChatOpenAI(model='gpt-4', temperature=0)
     retriever = SelfQueryRetriever.from_llm(
@@ -50,6 +49,7 @@ def get_retriever():
         structured_query_translator=ChromaTranslator(),
         verbose=True,
         enable_limit=False,
+        use_original_query=True,
         search_type='similarity',
         search_kwargs={'k': 7}
     )
