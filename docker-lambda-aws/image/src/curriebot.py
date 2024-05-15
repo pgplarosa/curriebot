@@ -68,13 +68,10 @@ class GithubInput(BaseModel):
 @tool(args_schema=GithubInput)
 def github_qa(user_query: str) -> str:
     """answers questions related to github, portfolio, github projects, personal projects, not including work projects"""
-    github_path = "raw/github/"
+    github_path = "raw/github/github_summary.csv"
     github_full_path = os.path.join(config.root_dir, github_path)
     
     model = ChatOpenAI(temperature=config.temperature, model_name=config.model_name)
-    # Assuming 'root_dir' is defined as your Lambda's working directory
-    root_dir = os.environ.get("LAMBDA_TASK_ROOT", "/var/task")
-    raw_dir = os.path.join(root_dir, "raw")
     
     df = pd.read_csv(github_full_path)
     

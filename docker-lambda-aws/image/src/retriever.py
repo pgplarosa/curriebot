@@ -16,7 +16,6 @@ def get_retriever():
     embedding = OpenAIEmbeddings()
     vector_db_path = os.path.join(config.root_dir, config.chroma_directory)
     vector_db = Chroma(persist_directory=vector_db_path, embedding_function=embedding)
-    
     metadata_field_info = [
     AttributeInfo(
         name="Category",

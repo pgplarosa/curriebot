@@ -7,4 +7,4 @@ chroma_directory = "vector_db"
 local_root = "/home/ubuntu/curriebot/docker-lambda-aws/image"
 root_dir = os.environ.get("LAMBDA_TASK_ROOT", local_root)
 temperature = 1
-model_name = "gpt-4-turbo"
+model_name = "gpt-4"
